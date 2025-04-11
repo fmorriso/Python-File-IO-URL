@@ -11,7 +11,7 @@ def convert_google_drive_public_link_to_readable_url(link: str) -> str:
     """
     Converts a Google Drive share link for a file to one that can be used to read the file contents:
     :param link: the original link
-    :return:
+    :return: a URL string that can be used to read the file contents
 
     Example input:
     https://drive.google.com/file/d/1cU2M7HNdKLl8GXpXujgRwxBMGhlfmwHm/view?usp=sharing
