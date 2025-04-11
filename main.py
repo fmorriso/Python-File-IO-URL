@@ -25,6 +25,7 @@ def convert_google_drive_public_link_to_url(link: str) -> str:
 print(f'File I/O from URL using python version {get_python_version()}')
 # id = '13v8F280YBjJHnJlOBQsEtd0dtG8nJXXc'
 id = '1cU2M7HNdKLl8GXpXujgRwxBMGhlfmwHm' # python code snippets.txt
+# https://drive.google.com/file/d/1cU2M7HNdKLl8GXpXujgRwxBMGhlfmwHm/view?usp=sharing
 url = f'https://drive.google.com/uc?export=download&id={id}'
 print(f'url: {url}')
 # resp = urllib3.request('GET', url, decode_content = True)
