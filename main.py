@@ -1,4 +1,5 @@
 import sys
+
 import requests
 from requests import Response
 
@@ -30,13 +31,11 @@ print(f'File I/O from URL using python version {get_python_version()}')
 google_share_link = 'https://drive.google.com/file/d/1cU2M7HNdKLl8GXpXujgRwxBMGhlfmwHm/view?usp=sharing'
 readable_url = convert_google_drive_public_link_to_readable_url(google_share_link)
 
-s: Response = requests.get(readable_url)
-# print(f'status_code: {s.status_code}')
-binary_string_content: bytes = s.content  # binary string
+resp: Response = requests.get(readable_url)
+binary_string_content: bytes = resp.content  # binary string
 
 # now convert binary string to regular string
 string_content = binary_string_content.decode('utf-8')
-
 
 # echo each line from the text file
 for line in string_content.splitlines():
