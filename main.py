@@ -16,8 +16,8 @@ def convert_google_drive_public_link_to_readable_url(link: str) -> str:
     Example input:
     https://drive.google.com/file/d/1cU2M7HNdKLl8GXpXujgRwxBMGhlfmwHm/view?usp=sharing
     """
-    find_start = 'file/d/'
-    start_index = link.index(find_start) + len(find_start)
+    find_start_of_id = 'file/d/'
+    start_index = link.index(find_start_of_id) + len(find_start_of_id)
     ending_index = link.index('/view?')
     id = link[start_index:ending_index]
     # print(f'{id = }')
