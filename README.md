@@ -1,6 +1,11 @@
 # Python File I/O from URL
 Simple example of reading from a text file located on Google Drive and shared out to Viewers
 
+## Directions for use
+If you want to point the code to your own Google Drive shared text file:
+1.  Open up the `.env` file with your favorite text editor.
+1.  Change the value of `GOOGLE_SHARED_TEXT_FILE_LINK` to point to your shared file located on your Google Drive.
+
 ## Tools Used
 
 | Tool    |  Version |
