@@ -44,9 +44,11 @@ print(f'url: {url}')
 
 s = requests.get(url)
 print(f'status_code: {s.status_code}')
-b_content = s.content
+b_content = s.content # binary string
 print(f'{b_content = }')
+# now convert binary string to regular string
 s_content = b_content.decode('utf-8')
 # print(f'{s_content = }')
+# echo each line from the text file
 for line in s_content.splitlines():
     print(line)
