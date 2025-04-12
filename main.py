@@ -10,20 +10,19 @@ def get_python_version() -> str:
     return f'{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}'
 
 
-def convert_google_drive_public_link_to_readable_url(google_file_id: str) -> str:
+def convert_google_drive_public_link_to_readable_url(google_shared_file_link: str) -> str:
     """
     Converts a Google Drive share link for a file to one that can be used to read the file contents:
-    :param google_file_id: the original link
+    :param google_shared_file_link: the original link
     :return: a URL string that can be used to read the file contents
 
     Example input:
     https://drive.google.com/file/d/1cU2M7HNdKLl8GXpXujgRwxBMGhlfmwHm/view?usp=sharing
     """
     find_start_of_id = 'file/d/'
-    start_index = google_file_id.index(find_start_of_id) + len(find_start_of_id)
-    ending_index = google_file_id.index('/view?')
-    file_id_extracted = google_file_id[start_index:ending_index]
-    # print(f'{id = }')
+    start_index = google_shared_file_link.index(find_start_of_id) + len(find_start_of_id)
+    ending_index = google_shared_file_link.index('/view?')
+    file_id_extracted = google_shared_file_link[start_index:ending_index]
     return f'https://drive.google.com/uc?export=download&id={file_id_extracted}'
 
 
