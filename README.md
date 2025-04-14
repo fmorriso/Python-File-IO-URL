@@ -12,8 +12,8 @@ If you want to point the code to your own Google Drive shared text file:
 ## Tools Used
 
 | Tool          |  Version |
-| :------------ | -------: |
-| Python        |   3.13.2 |
+| :------------ |---------:|
+| Python        |   3.13.3 |
 | python-dotenv |    1.1.0 |
 | requests      |   2.32.3 |
 | PyCharm       | 2024.3.5 |
@@ -21,10 +21,10 @@ If you want to point the code to your own Google Drive shared text file:
 
 ## Change History
 
-| Date       | Description                                       |
-| :--------- | :------------------------------------------------ |
-| 2025-04-11 | Initial creation                                  |
-| 2025-04-15 | update requirements.txt to reflect requests level |
+| Date       | Description                                                                  |
+| :--------- |:-----------------------------------------------------------------------------|
+| 2025-04-11 | Initial creation                                                             |
+| 2025-04-15 | update requirements.txt to reflect requests level & upgrade to python 3.13.3 |
 
 ## References
 
