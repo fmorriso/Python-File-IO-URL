@@ -51,11 +51,29 @@ def read_file_contents_all_at_once():
         print(line)
 
 
+def read_file_contents_one_line_at_a_time():
+    # My Drive > public > python code snippets.txt
+    google_text_file_shared_link: str = ProgramSettings.get_setting('GOOGLE_SHARED_TEXT_FILE_LINK')
+    readable_text_file_url = convert_google_drive_public_link_to_readable_url(google_text_file_shared_link)
+
+    # Make the GET request with streaming enabled
+    with requests.get(readable_text_file_url, stream = True) as resp:
+        # Ensure the response status is successful
+        resp.raise_for_status()
+
+        # Process the response line by line
+        for line in resp.iter_lines():
+            # Decode and print each line
+            if line:  # Non-empty line
+                print(line.decode('utf-8'))
+
+
 def main():
     print(f'File I/O from URL using python version {get_python_version()}')
     print(f'\tand requests version {get_requests_version()}')
 
-    read_file_contents_all_at_once()
+    # read_file_contents_all_at_once()
+    read_file_contents_one_line_at_a_time()
 
 
 if __name__ == '__main__':
