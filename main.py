@@ -69,12 +69,13 @@ def read_file_contents_one_line_at_a_time():
 
 
 def main():
-    print(f'File I/O from URL using python version {get_python_version()}')
-    print(f'\tand requests version {get_requests_version()}')
-
+    
     # read_file_contents_all_at_once()
     read_file_contents_one_line_at_a_time()
 
 
 if __name__ == '__main__':
+    print(f'File I/O from URL using python version {get_python_version()}')
+    print(f'\tand requests version {get_requests_version()}')
+
     main()
