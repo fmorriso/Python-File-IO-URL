@@ -62,7 +62,7 @@ def read_file_contents_one_line_at_a_time():
         resp.raise_for_status()
 
         # Process the response line by line
-        for line in resp.iter_lines():
+        for line in resp.iter_lines(chunk_size = 4096):
             # Decode and print each line
             if line:  # Non-empty line
                 print(line.decode('utf-8'))
